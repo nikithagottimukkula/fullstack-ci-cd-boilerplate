@@ -1,0 +1,39 @@
+{
+  "name": "fullstack-ci-cd-boilerplate",
+  "version": "1.0.0",
+  "description": "A boilerplate project showcasing Dockerized React + Node.js microservices with CI/CD pipelines",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:frontend": "cd frontend && npm start",
+    "dev:backend": "cd backend && npm run dev",
+    "build": "npm run build:frontend && npm run build:backend",
+    "build:frontend": "cd frontend && npm run build",
+    "build:backend": "cd backend && npm run build",
+    "test": "npm run test:frontend && npm run test:backend",
+    "test:frontend": "cd frontend && npm test",
+    "test:backend": "cd backend && npm test",
+    "docker:build": "docker-compose build",
+    "docker:up": "docker-compose up",
+    "docker:down": "docker-compose down",
+    "install:all": "npm install && cd frontend && npm install && cd ../backend && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "keywords": [
+    "react",
+    "nodejs",
+    "docker",
+    "aws",
+    "ci-cd",
+    "microservices",
+    "fullstack"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
