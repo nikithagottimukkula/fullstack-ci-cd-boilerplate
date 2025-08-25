@@ -26,5 +26,3 @@ This repository serves as a starter kit for building, containerizing, and deploy
 - **Infrastructure:** AWS ECS Fargate, CloudFormation, S3, IAM, CloudWatch  
 
 ---
-
-## 📂 Project Structure
